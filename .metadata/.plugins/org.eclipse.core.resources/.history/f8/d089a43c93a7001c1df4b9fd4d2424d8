@@ -1,0 +1,7 @@
+package application;
+
+//import java.lang.Object.org.jivesoftware.smack.packet.Stanza;
+
+public class SampleController implements TopLevelStreamElement {
+	
+}

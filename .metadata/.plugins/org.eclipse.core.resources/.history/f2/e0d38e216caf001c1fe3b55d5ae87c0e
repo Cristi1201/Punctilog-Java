@@ -1,0 +1,129 @@
+package application;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.maven.shared.dependency.graph.DependencyNode;
+
+import edu.stanford.nlp.io.RuntimeIOException;
+import edu.stanford.nlp.ling.CoreAnnotations;
+import edu.stanford.nlp.ling.CoreLabel;
+import edu.stanford.nlp.parser.nndep.Config;
+import edu.stanford.nlp.pipeline.CoNLLUReader;
+import edu.stanford.nlp.pipeline.CoreNLPProtos.DependencyGraph;
+import edu.stanford.nlp.process.CoreLabelTokenFactory;
+import edu.stanford.nlp.util.CoreMap;
+
+//public class Main extends Application {
+//	@Override
+//	public void start(Stage primaryStage) {
+//		try {
+//			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
+//			Scene scene = new Scene(root,640,480);
+//			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+//			primaryStage.setScene(scene);
+//			primaryStage.setResizable(false);
+//			primaryStage.show();
+//		} catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+
+public class Main {
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+
+//		CoNLLDocumentReaderAndWriter a = new CoNLLDocumentReaderAndWriter();
+//		a.init(null);
+
+//		try {
+//			FileReader fr = new FileReader("doc1.conllu");
+//			Scanner sc = new Scanner(fr);
+//
+//			while (sc.hasNextLine()) {
+//				String abreviatura = sc.nextLine();
+//				System.out.println(abreviatura);
+//			}
+//			sc.close();
+//
+//		} catch (FileNotFoundException e) {
+//			System.out.println("Eroare la citirea fisierului \"Abrevieri.txt\"." + e.getMessage());
+//			e.printStackTrace();
+//		}
+//		
+//		
+//		CoNLLUReader cr = new CoNLLUReader();
+//		
+//		Object ob1 = cr.readCoNLLUFile("doc1.conllu");
+//		System.out.println(ob1.toString());
+//		
+////		Object ob2 = cr.readCoNLLUFileCreateCoNLLUDocuments("doc1.conllu");
+////		System.out.println(ob2.toString());
+////		Iterator<String> it = ob2.iterator();
+//		List<String> ar = cr.readCoNLLUFileCreateCoNLLUDocuments("doc1.conllu");
+//		System.out.println(ar.toString());
+//		Iterator<String> it = ar.iterator();
+		
+		boolean cPOS = true;
+		boolean unlabeled = true;
+		
+//		List<CoreMap> sents;
+//		List<DependencyGraph> trees;
+//		List<Dependencies> trees;
+		
+//		CoreLabelTokenFactory tf = new CoreLabelTokenFactory(false);
+		try {
+			CoNLLUReader conllUReader = new CoNLLUReader();
+			List<CoNLLUReader.CoNLLUDocument> docs = conllUReader.readCoNLLUFileCreateCoNLLUDocuments("ro_rrt.conllu");
+			for (CoNLLUReader.CoNLLUDocument doc : docs) {
+				for (CoNLLUReader.CoNLLUSentence conllSent : doc.sentences) {
+//					CoreMap sentence = new CoreLabel();
+//					List<CoreLabel> sentenceTokens = new ArrayList<CoreLabel>();
+//					LinkedList<DependencyTree> tree;
+					
+//					DependencyGraph tree;
+//	                Dependecies tree = new Dependencies();
+//					Dependencies tree;
+					for (String tokenLine : conllSent.tokenLines) {
+						String[] splits = tokenLine.split("\t");
+						System.out.println(splits[1]);
+						String word = splits[CoNLLUReader.CoNLLU_WordField],
+								pos = cPOS ? splits[CoNLLUReader.CoNLLU_UPOSField]
+										: splits[CoNLLUReader.CoNLLU_XPOSField],
+								depType = splits[CoNLLUReader.CoNLLU_RelnField];
+						// TODO head
+						int head = -1;
+//						System.out.println(word + " +++ " + pos + " +++ " + depType);
+						try {
+							head = Integer.parseInt(splits[6]);
+						} catch (NumberFormatException e) {
+							continue;
+						}
+//						CoreLabel token = tf.makeToken(word, 0, 0);
+//						token.setTag(pos);
+//						token.set(CoreAnnotations.CoNLLDepParentIndexAnnotation.class, head);
+//						token.set(CoreAnnotations.CoNLLDepTypeAnnotation.class, depType);
+//						sentenceTokens.add(token);
+//						if (!unlabeled)
+//							tree.add(head, depType);
+//						else
+//							tree.add(head, Config.UNKNOWN);
+					}
+//					trees.add(tree);
+//					sentence.set(CoreAnnotations.TokensAnnotation.class, sentenceTokens);
+//					sents.add(sentence);
+				}
+			}
+		} catch (IOException e) {
+			throw new RuntimeIOException(e);
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+		
+		System.out.println("***************************");
+		int i = 0;
+		while(i<Byte.MAX_VALUE) {
+			System.out.println(i++);
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.coref.data.Document"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.dcoref.Document"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.parser.nndep.Config"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.trees.Dependencies"/>
+    <fullyQualifiedTypeName name="org.apache.maven.shared.dependency.graph.DependencyNode"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.pipeline.CoreNLPProtos.DependencyGraph"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.pipeline.StanfordCoreNLP"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.coref.CorefCoreAnnotations"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.io.IOUtils"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.coref.data.CorefChain"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.ling.IndexedWord"/>
+    <fullyQualifiedTypeName name="javafx.stage.Stage"/>
+    <fullyQualifiedTypeName name="javafx.application.Application"/>
+    <fullyQualifiedTypeName name="edu.stanford.nlp.pipeline.Annotation"/>
+    <fullyQualifiedTypeName name="java.io.Writer"/>
+    <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
+</qualifiedTypeNameHistroy>
