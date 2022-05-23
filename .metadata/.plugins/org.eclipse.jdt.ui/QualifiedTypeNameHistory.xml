@@ -8,8 +8,6 @@
     <fullyQualifiedTypeName name="org.apache.maven.shared.dependency.graph.DependencyNode"/>
     <fullyQualifiedTypeName name="edu.stanford.nlp.pipeline.CoreNLPProtos.DependencyGraph"/>
     <fullyQualifiedTypeName name="edu.stanford.nlp.pipeline.StanfordCoreNLP"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.util.stream.Stream"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
@@ -19,9 +17,15 @@
     <fullyQualifiedTypeName name="edu.stanford.nlp.io.IOUtils"/>
     <fullyQualifiedTypeName name="edu.stanford.nlp.coref.data.CorefChain"/>
     <fullyQualifiedTypeName name="edu.stanford.nlp.ling.IndexedWord"/>
-    <fullyQualifiedTypeName name="javafx.stage.Stage"/>
-    <fullyQualifiedTypeName name="javafx.application.Application"/>
     <fullyQualifiedTypeName name="edu.stanford.nlp.pipeline.Annotation"/>
     <fullyQualifiedTypeName name="java.io.Writer"/>
     <fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="javafx.stage.Stage"/>
+    <fullyQualifiedTypeName name="javafx.application.Application"/>
+    <fullyQualifiedTypeName name="application.PunctilogSentence"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+    <fullyQualifiedTypeName name="javafx.scene.text.Text"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
 </qualifiedTypeNameHistroy>
